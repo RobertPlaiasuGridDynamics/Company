@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 import java.util.HashSet;
 import java.util.Set;
 
-@Component
+// @Component
 public class BootstrapData implements CommandLineRunner {
 
     private DepartmentRepository departmentRepository;
