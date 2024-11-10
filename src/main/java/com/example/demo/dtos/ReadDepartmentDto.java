@@ -2,7 +2,7 @@ package com.example.demo.dtos;
 
 public class ReadDepartmentDto {
 
-    private Integer id;
+    private Long id;
 
     private String name;
 
@@ -11,7 +11,7 @@ public class ReadDepartmentDto {
         super();
     }
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
@@ -23,7 +23,7 @@ public class ReadDepartmentDto {
         this.name = name;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 }

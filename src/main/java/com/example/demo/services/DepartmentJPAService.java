@@ -30,8 +30,11 @@ public class DepartmentJPAService implements DepartmentService {
 
     @Override
     public ReadDepartmentDto saveDepartment(WriteDepartmentDto department) {
-        return null;
+        Department departmentEntity = this.modelMapper.map(department,Department.class);
+        this.departmentRepository.save(departmentEntity);
+        return this.modelMapper.map(departmentEntity,ReadDepartmentDto.class);
     }
+
 
     @Override
     public void deleteDepartment(Long departmentId) {

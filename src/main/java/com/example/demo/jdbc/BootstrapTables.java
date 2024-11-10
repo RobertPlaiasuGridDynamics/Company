@@ -4,6 +4,7 @@ import java.sql.*;
 
 import static com.example.demo.jdbc.DatabaseConnection.*;
 
+
 public class BootstrapTables {
 
     private static String createTableDepartments()
@@ -78,7 +79,7 @@ public class BootstrapTables {
         try{
             // STEP 1: Register JDBC driver
             Class.forName(JDBC_DRIVER);
-
+            /*
             // STEP 2: Open a connection
             conn = DriverManager.getConnection(DB_URL,USER,PASS);
 
@@ -87,6 +88,13 @@ public class BootstrapTables {
             stmt = conn.createStatement();
 
             stmt.executeUpdate("insert into locations(region,city) values(' " + region + " ','" +city+ "')");
+            */
+            conn = DriverManager.getConnection(DB_URL,USER,PASS);
+            stmt = conn.createStatement();
+            stmt.execute("drop all objects delete files");
+
+
+
 
 
             // STEP 4: Clean-up environment

@@ -11,8 +11,6 @@ public class Department {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String name;
-    @ManyToMany
-    private Set<Employee> employees;
 
     protected Department()
     {
@@ -32,14 +30,6 @@ public class Department {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public Set<Employee> getEmployees() {
-        return employees;
-    }
-
-    public void setEmployees(Set<Employee> employees) {
-        this.employees = employees;
     }
 
     @Override

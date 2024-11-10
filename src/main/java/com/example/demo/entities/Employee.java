@@ -16,7 +16,7 @@ public class Employee {
     private String email;
     private Integer salary;
     private String address;
-    @ManyToMany(fetch = FetchType.EAGER)
+    @ManyToMany(fetch = FetchType.EAGER,cascade = CascadeType.ALL)
     private Set<Department> departments;
     @ManyToOne
     private Location location;
